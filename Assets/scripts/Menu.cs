@@ -9,21 +9,25 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
     }
 
     public void Quit()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         Application.Quit();
     }
 
     public void startFlappy()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         SceneManager.LoadSceneAsync("levels/" + "flappyHero", LoadSceneMode.Single);
     }
 
     public void startRhythm()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         SceneManager.LoadSceneAsync("levels/" + "healthyRhythm");
     }
 
