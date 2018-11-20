@@ -87,6 +87,15 @@ public class Creator : MonoBehaviour {
         krossVar.transform.SetParent (canvas.transform);
 		Rigidbody2D krossRigid = krossVar.GetComponent<Rigidbody2D> ();
         krossRigid.velocity = new Vector2(0,velocity);
-	} 
+	}
+
+    public void BackToMenu()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        SceneManager.LoadScene("Menu");
+    }
 
 }

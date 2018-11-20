@@ -29,11 +29,11 @@ public class GamesController : MonoBehaviour {
     
 	// Update is called once per frame
 	void Update () {
-	    if( Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             updateFunction();
         }
-	}
+    }
 
     // use same behaviour than with mouse press
     public void androidFlap(string value)
@@ -67,6 +67,16 @@ public class GamesController : MonoBehaviour {
     {
         gameOverText.SetActive(true);
         gameOver = true;
+    }
+
+
+    public void BackToMenu()
+    {
+        //if (audioSource.isPlaying)
+        //{
+        //    audioSource.Stop();
+        //}
+        SceneManager.LoadScene("Menu");
     }
 
 }
