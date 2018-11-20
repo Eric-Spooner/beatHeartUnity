@@ -18,7 +18,7 @@ public class GamesController : MonoBehaviour {
     // Used for initialization
     void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }else if (instance != this)
@@ -36,9 +36,13 @@ public class GamesController : MonoBehaviour {
     }
 
     // use same behaviour than with mouse press
-    public void androidFlap(string value)
+    public void androidValue(string value)
     {
-        updateFunction();
+        int intVal = int.Parse(value);
+        if (intVal > 0)
+        {
+            updateFunction();
+        }
     }
 
     private void updateFunction()

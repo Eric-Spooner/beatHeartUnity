@@ -27,8 +27,7 @@ public class Creator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//AndroidJavaObject myAndroidJavaObject = new AndroidJavaObject ("com.my");
-		levelInfo = ((TextAsset)Resources.Load("FOOLS_G_b0"));
+        levelInfo = ((TextAsset)Resources.Load("FOOLS_G_b0"));
 
 		RectTransform controlMask = GameObject.Find ("controlMask").GetComponent<RectTransform> ();
 		unitsToTravel = Screen.height / 2.0 + controlMask.transform.localPosition.y +(-1)*((GameObject)Resources.Load ("kross")).transform.localPosition.y; 
