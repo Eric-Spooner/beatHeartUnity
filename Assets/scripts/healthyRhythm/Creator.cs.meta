@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 37e87c3a5b31b714297a2fd5a904d24d
+timeCreated: 1511609204
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - levelInfo: {fileID: 4900000, guid: b7dec8172e532614bb4ae22c9bc7e5bd, type: 3}
+  - arrowLeft: {fileID: 1561373382926310, guid: 88ba3dff57110904091d1f263ba6f078,
+      type: 2}
+  - arrowRight: {fileID: 1967808078572986, guid: 460c11f8f886fe24fb64e61634ea6208,
+      type: 2}
+  - arrowDubble: {fileID: 1317857569979660, guid: 7aa9839e58168604f8c8aae29751b46f,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
