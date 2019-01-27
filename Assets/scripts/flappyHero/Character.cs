@@ -7,7 +7,6 @@ public class Character : MonoBehaviour {
     public float upForce = 100f;
 
     public Rigidbody2D rb;
-    private bool isDead = false;
 
 	// Use this for initialization
 	void Start () {
@@ -22,9 +21,9 @@ public class Character : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isDead = true;
-        rb.velocity = Vector2.zero;
-        GamesController.instance.BirdDied();
+        if (!collision.collider.name.Equals("top")) {
+            flap();
+        }
     }
 
 }

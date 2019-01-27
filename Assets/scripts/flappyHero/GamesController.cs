@@ -10,10 +10,13 @@ public class GamesController : MonoBehaviour {
     public Character character;
     public GameObject gameOverText;
     public bool gameOver = false;
-    public float scrollSpeed = -1.5f;
-    public Text scoreText;
+    public float scrollSpeed = -100.0f;
+    public float dieAmount = 3.0f;
+    public GameObject scoreText;
+    public Text scoreText2;
 
     private int score = 0;
+    private int lost = 0;
 
     // Used for initialization
     void Awake()
@@ -64,12 +67,27 @@ public class GamesController : MonoBehaviour {
             return;
         }
         score++;
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.GetComponent<Text>().text = "Score: " + score.ToString();
+        scoreText2.text = "SCORE: " + score.ToString();
+    }
+
+    public void KitLost()
+    {
+        if (gameOver)
+        {
+            return;
+        }
+        lost++;
+        if(lost >= dieAmount)
+        {
+            BirdDied();
+        }
     }
 
     public void BirdDied()
     {
         gameOverText.SetActive(true);
+        scoreText.SetActive(false);
         gameOver = true;
     }
 

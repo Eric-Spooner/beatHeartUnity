@@ -3,33 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ColumnPool : MonoBehaviour {
-    public GameObject columnPrefab;                                 //The column game object.
-    public int columnPoolSize = 5;                                  //How many columns to keep on standby.
+    public GameObject firstAidKit;                                 //The column game object.
     private float spawnRate = 3.8f;                                    //How quickly columns spawn.
-    private float columnMin = 0f;                                   //Minimum y value of the column position.
-    private float columnMax = 2.9f;                                  //Maximum y value of the column position.
-
-    private GameObject[] columns;                                   //Collection of pooled columns.
-    private int currentColumn = 0;                                  //Index of the current column in the collection.
-
-    private Vector2 objectPoolPosition = new Vector2(-15, -25);     //A holding position for our unused columns offscreen.
+    private float columnMin = -1f;                                   //Minimum y value of the column position.
+    private float columnMax = 4f;                                  //Maximum y value of the column position.
     private float spawnXPosition = 10f;
-
     private float timeSinceLastSpawned;
-
 
     void Start()
     {
-        timeSinceLastSpawned = 2f;
-
-        //Initialize the columns collection.
-        columns = new GameObject[columnPoolSize];
-        //Loop through the collection... 
-        for (int i = 0; i < columnPoolSize; i++)
-        {
-            //...and create the individual columns.
-            columns[i] = (GameObject)Instantiate(columnPrefab, objectPoolPosition, Quaternion.identity);
-        }
+        timeSinceLastSpawned = 0f;
     }
 
 
@@ -45,16 +28,7 @@ public class ColumnPool : MonoBehaviour {
             //Set a random y position for the column
             float spawnYPosition = Random.Range(columnMin, columnMax);
 
-            //...then set the current column to that position.
-            columns[currentColumn].transform.position = new Vector2(spawnXPosition, spawnYPosition);
-
-            //Increase the value of currentColumn. If the new size is too big, set it back to zero
-            currentColumn++;
-
-            if (currentColumn >= columnPoolSize)
-            {
-                currentColumn = 0;
-            }
+            Instantiate(firstAidKit, new Vector2(spawnXPosition, spawnYPosition), Quaternion.identity);
         }
     }
 
