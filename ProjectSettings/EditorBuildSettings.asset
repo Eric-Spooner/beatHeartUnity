@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Menu.unity
     guid: a1a914ccd231fe54099a38f25af1cb65
-  - enabled: 1
+  - enabled: 0
     path: Assets/levels/healthyRhythm.unity
     guid: cdda27972667be14193003e22b2b866d
   - enabled: 1
-    path: Assets/levels/flappyHero.unity
+    path: Assets/flappyHero.unity
     guid: 2173b0c98d2c562428a328ecacdfa6a4
