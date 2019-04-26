@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GamesController : MonoBehaviour {
 
+    public static bool firstTime = true;
     public static GamesController instance;
     public Character character;
     public GameObject gameOverText;
@@ -21,8 +22,13 @@ public class GamesController : MonoBehaviour {
     private void Start()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
+        if (firstTime)
+        {
+            firstTime = false;
+            BirdDied();
+        }
     }
-
+     
     // Used for initialization
     void Awake()
     {
