@@ -18,6 +18,11 @@ public class GamesController : MonoBehaviour {
     private int score = 0;
     private int lost = 0;
 
+    private void Start()
+    {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+    }
+
     // Used for initialization
     void Awake()
     {
@@ -32,10 +37,10 @@ public class GamesController : MonoBehaviour {
     
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
-        {
-            updateFunction();
-        }
+       // if (Input.GetMouseButtonDown(0))
+        //{
+        //    updateFunction();
+      //  }
     }
 
     // use same behaviour than with mouse press
@@ -98,7 +103,8 @@ public class GamesController : MonoBehaviour {
         //{
         //    audioSource.Stop();
         //}
-        SceneManager.LoadScene("Menu");
+        //SceneManager.LoadScene("Menu");
+        Application.Quit();
     }
 
 }
