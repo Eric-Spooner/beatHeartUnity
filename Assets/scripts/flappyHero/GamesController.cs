@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GamesController : MonoBehaviour {
 
-    public static bool firstTime = false;
+    public static bool firstTime = true;
     public static GamesController instance;
     public Character character;
     public GameObject gameOverText;
@@ -17,6 +17,7 @@ public class GamesController : MonoBehaviour {
     public Text scoreText2;
 
     public float refTime;
+    public float startTime;
 
     private int score = 0;
     private int lost = 0;
@@ -27,6 +28,7 @@ public class GamesController : MonoBehaviour {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
         if (firstTime)
         {
+            startTime = Time.time;
             firstTime = false;
             BirdDied();
         }
@@ -70,8 +72,10 @@ public class GamesController : MonoBehaviour {
         int intVal = int.Parse(value);
         if (intVal > 0)
         {
-            setRefTime();
-            updateFunction();
+            if ((Time.time - startTime) > 0.5) { 
+                setRefTime();
+                updateFunction();
+            }
         }
     }
 
