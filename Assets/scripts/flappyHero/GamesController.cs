@@ -72,7 +72,7 @@ public class GamesController : MonoBehaviour {
         int intVal = int.Parse(value);
         if (intVal > 0)
         {
-            if ((Time.time - startTime) > 0.5) { 
+            if ((Time.time - startTime) > 0.2f) { 
                 setRefTime();
                 updateFunction();
             }
