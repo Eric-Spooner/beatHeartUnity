@@ -29,6 +29,11 @@ public class ColumnPool : MonoBehaviour {
             float spawnYPosition = Random.Range(columnMin, columnMax);
 
             Instantiate(firstAidKit, new Vector2(spawnXPosition, spawnYPosition), Quaternion.identity);
+            Instantiate(firstAidKit, new Vector2(spawnXPosition+1, spawnYPosition), Quaternion.identity);
+            Instantiate(firstAidKit, new Vector2(spawnXPosition+2, spawnYPosition), Quaternion.identity);
+            Instantiate(firstAidKit, new Vector2(spawnXPosition, spawnYPosition-1), Quaternion.identity);
+            Instantiate(firstAidKit, new Vector2(spawnXPosition+1, spawnYPosition-1), Quaternion.identity);
+            Instantiate(firstAidKit, new Vector2(spawnXPosition+2, spawnYPosition-1), Quaternion.identity);
         }
     }
 

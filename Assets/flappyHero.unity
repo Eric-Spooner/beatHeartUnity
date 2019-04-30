@@ -182,7 +182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: TRY AGAIN
+  m_Text: Very Good!
 --- !u!222 &143685305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -304,7 +304,6 @@ GameObject:
   - component: {fileID: 536200168}
   - component: {fileID: 536200167}
   - component: {fileID: 536200166}
-  - component: {fileID: 536200170}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -394,17 +393,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 17.8, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &536200170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 536200165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7452d410781cec74f9f8c1ba8788d76e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &550768617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,6 +1573,7 @@ GameObject:
   - component: {fileID: 1842719394}
   - component: {fileID: 1842719393}
   - component: {fileID: 1842719392}
+  - component: {fileID: 1842719397}
   m_Layer: 0
   m_Name: flappy 2
   m_TagString: Player
@@ -1605,6 +1594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upForce: 200
   rb: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!60 &1842719393
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1635,9 +1625,10 @@ PolygonCollider2D:
       - {x: 1.235, y: -0.49499997}
       - {x: 1.395, y: -0.39499998}
       - {x: 1.4649999, y: -0.315}
-      - {x: 1.4794898, y: -0.14470452}
-      - {x: 1.3900142, y: 0.1064108}
-      - {x: 1.3778504, y: 0.12991883}
+      - {x: 2.1746936, y: -0.26914972}
+      - {x: 1.7254076, y: 0.101213515}
+      - {x: 1.3900142, y: 0.22936976}
+      - {x: 1.4270335, y: 0.15451054}
       - {x: 1.3200142, y: 0.09178741}
       - {x: 1.3138177, y: 0.18745953}
       - {x: 1.3544087, y: 0.1858198}
@@ -1672,16 +1663,16 @@ PolygonCollider2D:
       - {x: -0.97499996, y: 0.885}
       - {x: -0.98499995, y: 0.84499997}
       - {x: -0.98499995, y: 0.765}
-      - {x: -1.1949999, y: 1.0749999}
-      - {x: -1.225, y: 1.0849999}
-      - {x: -1.355, y: 0.92499995}
-      - {x: -1.365, y: 0.715}
-      - {x: -1.3349999, y: 0.60499996}
+      - {x: -1.4778054, y: 0.5216845}
+      - {x: -2.0242336, y: 0.31035846}
+      - {x: -1.9697949, y: -0.13244724}
+      - {x: -1.7707647, y: -0.80969137}
+      - {x: -1.0398982, y: -1.0057628}
       - {x: -1.405, y: 0.505}
       - {x: -1.415, y: 0.385}
-      - {x: -1.365, y: 0.255}
+      - {x: -2.0289786, y: 0.021377921}
       - {x: -1.405, y: 0.125}
-      - {x: -1.426344, y: 0.024999999}
+      - {x: -2.1149147, y: -0.19632623}
       - {x: -1.4282126, y: -0.0461154}
       - {x: -1.415753, y: -0.077755004}
       - {x: -1.4041135, y: -0.07745942}
@@ -1695,9 +1686,9 @@ PolygonCollider2D:
       - {x: -1.431425, y: -0.34201625}
       - {x: -1.3932936, y: -0.33336037}
       - {x: -1.4089653, y: -0.37903237}
-      - {x: -1.3827692, y: -0.5760487}
+      - {x: -1.3335857, y: -0.9203338}
       - {x: -1.3511964, y: -0.585}
-      - {x: -1.375, y: -0.625}
+      - {x: -1.2028571, y: -0.9446932}
       - {x: -1.3149999, y: -0.775}
       - {x: -1.115, y: -1.005}
       - {x: -0.805, y: -1.135}
@@ -1760,7 +1751,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 98c312f3141688e429cb6c3f737f1338, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a859f548294c1047ba6c0b869949339, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1777,12 +1768,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1842719391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalPosition: {x: -2.26, y: -0.06, z: -3}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1842719397
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1842719391}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 782be07b8e7020d4d87ec9622e3c2aac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1958215263
 GameObject:
   m_ObjectHideFlags: 0
