@@ -28,12 +28,14 @@ public class ColumnPool : MonoBehaviour {
             //Set a random y position for the column
             float spawnYPosition = Random.Range(columnMin, columnMax);
 
-            Instantiate(firstAidKit, new Vector2(spawnXPosition, spawnYPosition), Quaternion.identity);
-            Instantiate(firstAidKit, new Vector2(spawnXPosition+1, spawnYPosition), Quaternion.identity);
-            Instantiate(firstAidKit, new Vector2(spawnXPosition+2, spawnYPosition), Quaternion.identity);
-            Instantiate(firstAidKit, new Vector2(spawnXPosition, spawnYPosition-1), Quaternion.identity);
-            Instantiate(firstAidKit, new Vector2(spawnXPosition+1, spawnYPosition-1), Quaternion.identity);
-            Instantiate(firstAidKit, new Vector2(spawnXPosition+2, spawnYPosition-1), Quaternion.identity);
+            int columns = Mathf.RoundToInt(Random.Range(1.0f, 3.0f));
+            int rows = Mathf.RoundToInt(Random.Range(1.0f, 3.0f));
+            for (int i = 0; i < columns; i++)
+            {
+                for(int j = 0; j < rows; j++) { 
+                    Instantiate(firstAidKit, new Vector2(spawnXPosition+i, spawnYPosition-j), Quaternion.identity);
+                }
+            }
         }
     }
 
