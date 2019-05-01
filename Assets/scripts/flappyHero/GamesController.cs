@@ -60,10 +60,11 @@ public class GamesController : MonoBehaviour {
         {
             BirdDied();
         }
-       // if (Input.GetMouseButtonDown(0))
-        //{
-        //    updateFunction();
-      //  }
+
+      // if (Input.GetMouseButtonDown(0))
+      //  {
+      //      updateFunction();
+       // }
     }
 
     // use same behaviour than with mouse press

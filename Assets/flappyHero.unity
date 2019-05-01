@@ -897,6 +897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstAidKit: {fileID: 1636726296793082, guid: 2fabe145ad8e3cd4a92011ac47a44212,
     type: 2}
+  angryEagle: {fileID: 1415604037478154, guid: 38dc9dbfe3aaacb4cbb78338f85ca991, type: 2}
 --- !u!1 &598171385
 GameObject:
   m_ObjectHideFlags: 0
