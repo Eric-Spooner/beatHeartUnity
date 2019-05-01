@@ -18,6 +18,7 @@ public class GamesController : MonoBehaviour {
 
     public float refTime;
     public float startTime;
+    public float dieTime;
 
     private int score = 0;
     private int lost = 0;
@@ -61,10 +62,10 @@ public class GamesController : MonoBehaviour {
             BirdDied();
         }
 
-      // if (Input.GetMouseButtonDown(0))
-      //  {
-      //      updateFunction();
-       // }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    updateFunction();
+        //}
     }
 
     // use same behaviour than with mouse press
@@ -73,7 +74,7 @@ public class GamesController : MonoBehaviour {
         int intVal = int.Parse(value);
         if (intVal > 0)
         {
-            if ((Time.time - startTime) > 0.2f) { 
+            if ((Time.time - startTime) > 0.5f) { 
                 setRefTime();
                 updateFunction();
             }
@@ -84,7 +85,9 @@ public class GamesController : MonoBehaviour {
     {
         if (gameOver == true)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if((Time.time - dieTime) > 1.5f) { 
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
         else
         {
@@ -118,6 +121,7 @@ public class GamesController : MonoBehaviour {
 
     public void BirdDied()
     {
+        dieTime = Time.time;
         gameOverText.SetActive(true);
         scoreText.SetActive(false);
         gameOver = true;

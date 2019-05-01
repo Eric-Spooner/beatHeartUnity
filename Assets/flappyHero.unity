@@ -871,6 +871,7 @@ MonoBehaviour:
   scoreText2: {fileID: 1157555817}
   refTime: 0
   startTime: 0
+  dieTime: 0
 --- !u!4 &565493316
 Transform:
   m_ObjectHideFlags: 0
@@ -2217,7 +2218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upForce: 200
   rb: {fileID: 0}
-  anim: {fileID: 0}
 --- !u!60 &1842719393
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2446,7 +2446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.2025153, y: -0.0000011920929}
+  m_AnchoredPosition: {x: -0.3, y: -0.0000011920929}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1958215263
