@@ -295,6 +295,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="BeartHearthFactory.Plugins.csproj">
+      <Project>{A70B91AC-074C-19CC-55B0-F13C2A39E6C3}</Project>
+      <Name>BeartHearthFactory.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Bluetooth\Example\ArduinoHM10Test\ArduinoHM10Test.cs" />
+    <Compile Include="Assets\Bluetooth\Example\BluetoothLETest\BLETestScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\BluetoothLETest\BusyScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\BluetoothLETest\Central\CentralNordicScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\BluetoothLETest\Central\CentralPeripheralButtonScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\BluetoothLETest\Central\CentralRFduinoScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\BluetoothLETest\Central\CentralScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\BluetoothLETest\Central\CentralTISensorTagScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\BluetoothLETest\Peripheral\PeripheralScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\BluetoothLETest\TypeSelectionScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\iBeaconExample\iBeaconExampleScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\iBeaconExample\iBeaconItemScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\MultipleLevels\DeviceObject.cs" />
+    <Compile Include="Assets\Bluetooth\Example\MultipleLevels\FoundDeviceListScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\MultipleLevels\Level1Script.cs" />
+    <Compile Include="Assets\Bluetooth\Example\MultipleLevels\Level2Script.cs" />
+    <Compile Include="Assets\Bluetooth\Example\NetworkExample\NetworkExampleTest.cs" />
+    <Compile Include="Assets\Bluetooth\Example\ScannerTest\ScannedItemScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\ScannerTest\ScannerTestScript.cs" />
+    <Compile Include="Assets\Bluetooth\Example\SensorBugTest\SensorBugTest.cs" />
+    <Compile Include="Assets\Bluetooth\Example\SimpleTest\SimpleTest.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\scripts\Die.cs" />
     <Compile Include="Assets\scripts\flappyHero\Character.cs" />
     <Compile Include="Assets\scripts\flappyHero\Column.cs" />
@@ -317,6 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Material\Fonts\Jupiter\LICENSE.txt" />
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\music\Resources\FOOLS_G_b0.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
