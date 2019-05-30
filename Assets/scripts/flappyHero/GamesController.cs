@@ -62,10 +62,10 @@ public class GamesController : MonoBehaviour {
             BirdDied();
         }
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    updateFunction();
-        //}
+        if (Input.GetMouseButtonDown(0))
+        {
+            updateFunction();
+        }
     }
 
     // use same behaviour than with mouse press
@@ -75,7 +75,6 @@ public class GamesController : MonoBehaviour {
         if (intVal > 0)
         {
             if ((Time.time - startTime) > 0.5f) { 
-                setRefTime();
                 updateFunction();
             }
         }
@@ -91,6 +90,7 @@ public class GamesController : MonoBehaviour {
         }
         else
         {
+            setRefTime();
             character.flap();
         }
     }
