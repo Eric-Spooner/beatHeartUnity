@@ -112,20 +112,7 @@ public class MainMenu : MonoBehaviour
                         //disconnect action
                         Debug.Log("Device disconnected " + disconnect);
                         //start search and conenct again
-                        state = States.Scan;
-                        Debug.Log("Start rescan :)");
-                        BluetoothLEHardwareInterface.Initialize(true, false, () =>
-                        {
-                            Debug.Log("Started bluetooth search:");
-                            timeout = startScanDelay;
-                            state = States.Scan;
-                        },
-                        (error) =>
-                        {
-                            Debug.Log("Error: " + error);
-                            if (error.Contains("Bluetooth LE Not Enabled"))
-                                BluetoothLEHardwareInterface.BluetoothEnable(true);
-                        });
+                        state = States.Unsubscribe;
                     }
                 });
                 break;
