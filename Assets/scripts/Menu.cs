@@ -6,11 +6,25 @@ public class Menu : MonoBehaviour
 {
     private static AndroidJavaObject curActivity;
     private static Canvas canvas;
+    public static Menu instance;
 
     void Start()
     {
         Screen.orientation = ScreenOrientation.Portrait;
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+    }
+
+    // Used for initialization
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Quit()

@@ -11,7 +11,7 @@ public class GamesController : MonoBehaviour {
     public Character character;
     public GameObject gameOverText;
     public bool gameOver = false;
-    public float scrollSpeed = -100.0f;
+    public float scrollSpeed = -300.0f;
     public float dieAmount = 3.0f;
     public GameObject scoreText;
     public Text scoreText2;
@@ -80,7 +80,7 @@ public class GamesController : MonoBehaviour {
         }
     }
 
-    private void updateFunction()
+    public void updateFunction()
     {
         if (gameOver == true)
         {

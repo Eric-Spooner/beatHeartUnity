@@ -25,7 +25,7 @@ public class Character : MonoBehaviour {
     public void flapGround()
     {
         rb.velocity = Vector2.zero;
-        rb.AddForce(new Vector2(0.1f, upForce));
+        rb.AddForce(new Vector2(2f, upForce));
         anim.SetTrigger("Flap");
     }
 
