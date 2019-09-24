@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
     private float startScanTimeout = 10f;
     private float startScanDelay = 0.5f;
     private bool startScan = true;
-    private States state;
+    private States state = States.None;
     private bool flapped = false;
     private string connectAddress;
     public GameObject foundBallText;
@@ -41,6 +41,7 @@ public class MainMenu : MonoBehaviour
         {
             Debug.Log("Started bluetooth search:");
             timeout = startScanDelay;
+            Debug.Log("State Scan");
             state = States.Scan;
         },
         (error) =>
@@ -57,11 +58,11 @@ public class MainMenu : MonoBehaviour
         switch (state)
         {
             case States.None:
-                Debug.Log("State None");
+            //    Debug.Log("State None");
                 break;
 
             case States.Scan:
-                Debug.Log("State Scan");
+           //     Debug.Log("State Scan");
                 flapped = false;
                 timeout -= Time.deltaTime;
                 if (timeout <= 0f)
@@ -127,6 +128,7 @@ public class MainMenu : MonoBehaviour
                     if (state == States.Subscribe)
                     {
                         state = States.None;
+                        Debug.Log("State None");
                         BluetoothLEHardwareInterface.StopScan();
                         startFlappy();
                     }
